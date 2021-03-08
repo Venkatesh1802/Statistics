@@ -1,0 +1,39 @@
+a = [1,2,3,4,5]
+b = [1,2,3,4,5,6]
+def median(arr) :
+    len_arr = len(arr)
+    arr.sort()
+    
+    if len_arr % 2 == 0 :
+        mid = (arr[len_arr//2] + arr[len_arr//2- 1]) / 2
+    else : 
+        mid = arr[len_arr//2]
+    
+    return mid
+median(b)
+3.5
+def mean(x) : 
+    len_x = len(x)
+    x_sum = sum(x)
+    mean_x = x_sum / len_x
+    return mean_x
+mean(b)
+3.5
+lst = [4,4,5,5,5,3,2,1]
+from collections import Counter 
+def mode(y) :
+    len_y = len(y)
+    count = Counter(y)
+    count_list = dict(count)
+    print(count_list)
+    max_value = max(list(count.values()))
+    mode_y = [num for num , counts in count_list.items() if counts == max_value]
+    if len(mode_y) == len(y) :
+        return False
+    else :
+        return mode_y
+    
+    
+mode(lst)
+{4: 2, 5: 5}
+[5]
